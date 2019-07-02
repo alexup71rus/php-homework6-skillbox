@@ -1,4 +1,4 @@
-<?
+<?php
 $mainMenuItems = [
     [
         "title" => "Home",
@@ -24,10 +24,5 @@ $mainMenuItems = [
         "title" => "Catalog",
         "path" => "/route/catalog/",
         "sort" => 4,
-    ],
-    [
-        "title" => "Any big text for test",
-        "path" => "/route/text/",
-        "sort" => 6,
     ],
 ];

@@ -1,12 +1,13 @@
-<?
+<?php
 namespace Helper;
 
 /*
-* Функция для возврата содержимого из файла служит для ситуаций, когда нужно присвоить содержимое подключаемого файла в переменную
-* @param подключаемый файл
+* Буферизация php файла
+* @param путь к подключаемому файлу
+* @param переменные для шаблона
 * @return возвращает содержимое файла в формате string
 */
-function requireToVar($file): string{
+function requireTemplate(string $file, array $args): string {
     ob_start();
     require($file);
     return ob_get_clean();
@@ -20,7 +21,7 @@ function requireToVar($file): string{
 * @return возвращает обрезанную строку
 */
 function limiter(string $text, int $start, int $end): string {
-    return strlen($text) <= $end ? $text : substr($text, $start, $end)."...";
+    return mb_strlen($text) <= $end ? $text : mb_substr($text, $start, $end-3)."...";
 }
 
 /*

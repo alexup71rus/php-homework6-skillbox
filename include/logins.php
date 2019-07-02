@@ -1,4 +1,4 @@
-<?
+<?php
 $logins = [
     "qwe",
     "admin",
